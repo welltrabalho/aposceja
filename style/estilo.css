@@ -1,0 +1,307 @@
+*{
+    box-sizing: border-box;
+}
+
+
+:root{
+    --cor0: #005476;
+    --cor1: #C3DAE2;
+    --cor2: #F7941E;
+    --cor3: #005475;
+    --cor4: #9D2174;
+    --cor5: #002D42;
+/* --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;*/
+
+    --fonte-padrao: Arial, verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', sans-serif;
+    --fonte-android:'android', cursive;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-image: url(../imagem/bg-login.jpg);
+    color: #fff;
+}
+
+.border{
+    border: 1px solid red;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    /*align-items: flex-start;*/
+    width: 240px;
+    height: 100%;
+    padding: 40px 10px 30px 10px;
+    border-right: 2px solid rgb(0 50 70);
+    /*border-right: 1px solid #2f3336;*/
+    transition: all 0.35s;
+}
+
+.sidebar-header{
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.logo-img{
+    width: 38px;
+    min-height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s;
+    margin-left: 10px;
+}
+
+.logo-img:hover{
+    transform: scale(1.5);
+}
+
+.sidebar button{
+    height: 60px;
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+}
+
+.sidebar button > span{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+    padding: 0 41px 0 12px;
+    border-radius: 24px;
+    line-height: 1;
+}
+
+.sidebar button:hover > span{
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar button i{
+    position: relative;
+    font-size: 28px;
+    transition: 0.2s;
+}
+
+.sidebar button span{
+    font-size: 16px;
+}
+
+.sidebar > nav{
+    /*
+    o 1° flex-grow: quanto vai crescer nosso intem (nav)
+    o 2° flex-shrink: define o fator redução ( diminuir)
+    o 3° flez-basic: tamanho base de cada intem 
+    */
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 50, 70, 0.479);
+}
+
+
+.main{
+    margin-left: 250px;
+    margin-right: 6px;
+    overflow: hidden;
+}
+
+/*criei novo preste atenção */
+.main div{
+    margin-left: 10px;
+    margin-right: 6px;
+    overflow: hidden;
+}
+
+/*AJUSTANDO O SIDEBAR APENAS COM ICONES */
+
+@media (width < 920px){
+    .sidebar{
+        width: 72px;
+    }
+
+    .sidebar button > span{
+        width: 50px;
+    }
+
+    .sidebar button > span > span{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+.main{
+    transition: margin 0.4s;
+    margin-left:78px;
+     }
+
+/*criei novo preste atenção */
+     .main div{
+        margin-left: 14px;
+    }
+}
+
+/*mexendo no mobile aqui tudo */
+
+.button-mobile{
+    display: none;
+    align-self: flex-start;
+    align-items: center;
+    margin: 16px;
+    background: transparent;
+    color: white;
+    border: 0;
+}
+
+.button-mobile span{
+    font-size: 24px;
+    margin-top: 8px;
+    
+}
+
+.menu-mobile{
+    display: none;
+}
+
+.menu-mobile-active{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.menu-mobile-active button{
+    background: transparent;
+    border: 0;
+    color: inherit;
+    margin-bottom: 16px;
+}
+
+.menu-mobile-active button > span{
+    display: inline-flex;
+    align-items: center;
+}
+
+.mobile-text{
+    font-size: 22px;
+    margin-left: 8px;
+}
+
+@media (max-width: 290px){
+    .sidebar{
+        display: none;
+    }
+
+    .button-mobile{
+        display: flex;
+    }
+
+    .main{
+        margin-left: 6px;
+    }
+
+}
+
+
+/*nova configuração */
+
+main h1{
+    
+    padding: 10px 41px 10px 12px;
+    border-radius: 24px;
+    line-height: 1;
+    cursor: pointer;
+   
+
+
+    text-align: center;
+    font-weight: bold;
+    color: rgb(228 168 18);
+    font-family: "ubuntu";
+    border: 1px solid white;
+    font-size: 30px;
+}
+
+main h2{
+    border: 1px solid white;
+    border-radius: 24px;
+
+
+    text-align: left;
+    padding: 10px 0 10px 20px;
+    font-family: (ubuntu);
+    color: rgb(229 168 18);
+}
+
+main h3{
+    padding: 10px 0 10px 20px;
+    border: 1px solid white;
+    border-radius: 24px;
+    color: rgb(229 168 18);
+    font-family: (ubuntu);
+    text-align: center;
+}
+
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.5em;
+}
+
+
+button > span > span a{
+    color: white;
+    text-decoration: none;
+}
+
+
+div {
+    border-radius: 24px;
+    margin-left: 250px;
+}
+
+div h3 {
+    background-color: rgba(255, 255, 255, 0.945);
+    margin-left: 42px;
+    color: black;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+div ul {
+    list-style-type: '\1F44D';
+    list-style-position: inside;
+    columns: 2;
+}
+
+#dif{
+    color: rgb(229 168 18);
+    text-align: center;
+}
