@@ -94,10 +94,14 @@ body{
 }
 
 .sidebar button i{
+    /* MUDEI AQUI PRESTE ATENÇÃO !!!! COLOQQUEI UM COLOR   */
+    color: white;
     position: relative;
     font-size: 28px;
     transition: 0.2s;
 }
+
+
 
 .sidebar button span{
     font-size: 16px;
