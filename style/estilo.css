@@ -317,3 +317,11 @@ div ul {
     color: rgb(229 168 18);
     text-align: center;
 }
+
+strong{
+    color: rgb(229 168 18);
+    font-family: ubuntu;
+    font-size: 18px;
+    border: 1px solid red;
+    
+}
